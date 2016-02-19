@@ -18,30 +18,26 @@ public class FizzBuzz {
     }
   }
 
-  public Boolean isDivisbleByThreeAndFive(int n) {
-    if (n % 5 == 0 && n % 3 == 0) {
-      return true;
-    } else {
-      return false;
-    }
-  }
-
-
-
-  public static void main(String[] args) {
+  public void FizzBuzz100() {
     for (int i = 1; i <= 100; i++) {
-      FizzBuzz FizzBuzzTest = new FizzBuzz();
-      System.out.println(i);
-      if (FizzBuzzTest.isDivisbleByThree(i) == true) {
+      if (isDivisbleByThree(i) == false && isDivisbleByFive(i) == false) {
+        System.out.println(i);
+      }
+      if (isDivisbleByThree(i) == true) {
         System.out.println("Fizz");
       }
-      if (FizzBuzzTest.isDivisbleByFive(i) == true) {
+      if (isDivisbleByFive(i) == true) {
         System.out.println("Buzz");
       }
-      if (FizzBuzzTest.isDivisbleByThreeAndFive(i) == true) {
+      if (isDivisbleByThree(i) == true && isDivisbleByFive(i) == true ) {
         System.out.println("FizzBuzz");
       }
     }
   }
-  
+
+  public static void main(String[] args) {
+    FizzBuzz game = new FizzBuzz();
+    game.FizzBuzz100();
+  }
+
 }
